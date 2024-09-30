@@ -352,9 +352,10 @@ function builder(level: number) {
       rigidBody: new BoxBody({ cx: 5, cy: 5, width: 1, height: 1 }),
       role: new Sensor({
         heroCollision: (_o: Actor, _h: Actor) => {
+          if(sessionInfo.gradeValue > 0 && sessionInfo.energyValue > 0){
           sessionInfo.energyValue -= 10;
           sessionInfo.healthValue += 10;
-          sessionInfo.gradeValue -= 20;
+          sessionInfo.gradeValue -= 20;}
 
           if (sessionInfo.energyValue > 100) {
             sessionInfo.energyValue = 100;
