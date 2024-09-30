@@ -168,6 +168,10 @@ function builder(level: number) {
       rigidBody: new CircleBody({ cx: 15, cy: 1, radius: .01 }),
       appearance: new TextSprite({ center: true, face: "Arial", size: 20, color: "#FFFFFF" }, "Dorm")
     });
+    new Actor({
+      rigidBody: new CircleBody({ cx: 8, cy: 8, radius: .01 }),
+      appearance: new TextSprite({ center: true, face: "Arial", size: 20, color: "#FFFFFF" }, "Press 'I' for Instructions!")
+    });
 
   
 
@@ -260,7 +264,7 @@ function builder(level: number) {
         rigidBody: new CircleBody({ cx: Math.floor((Math.random() * 13) + 3), cy: Math.floor((Math.random() * 6) + 2), radius: 0.4 }),
         role: new Goodie({
           onCollect: () => {
-            sessionInfo.energyValue += 7;
+            sessionInfo.energyValue += 6;
             if (sessionInfo.energyValue > 100) {
               sessionInfo.energyValue = 100;
             }
@@ -316,7 +320,7 @@ function builder(level: number) {
         rigidBody: new CircleBody({ cx: Math.floor((Math.random() * 13) + 3), cy: Math.floor((Math.random() * 6) + 2), radius: 0.4 }),
         role: new Goodie({
           onCollect: () => {
-            sessionInfo.gradeValue += 7;
+            sessionInfo.gradeValue += 6;
             if (sessionInfo.gradeValue > 100) {
               sessionInfo.gradeValue = 100;
             }
