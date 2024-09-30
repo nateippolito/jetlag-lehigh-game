@@ -367,6 +367,9 @@ function builder(level: number) {
           if (sessionInfo.gradeValue < 0) {
             sessionInfo.gradeValue = 0;
           }
+          if (sessionInfo.energyValue < 0) {
+            sessionInfo.energyValue = 0;
+          }
           stage.switchTo(builder, 4)
         }
       }),
